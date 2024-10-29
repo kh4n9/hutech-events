@@ -18,7 +18,7 @@ const LayoutComponent = ({ children }) => {
       </Header>
       <Layout>
         <Sider
-          width={200}
+          width={250}
           style={{
             background: colorBgContainer,
           }}

@@ -1,10 +1,8 @@
 import React from 'react';
 import { Menu } from 'antd';
+import { navItem } from './navItem';
 
-const items1 = ['1', '2', '3'].map((key) => ({
-  key,
-  label: `nav ${key}`,
-}));
+const items1 = navItem;
 
 const HeaderComponent = () => {
   return (
