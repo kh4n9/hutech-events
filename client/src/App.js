@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { routes } from './routes';
-import DefaultComponent from './components/DefaultComponent';
+import LayoutComponent from './components/LayoutComponent';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Routes>
           {routes.map((route, index) => {
             const Element = route.element;
-            const Layout = route.isHeader ? DefaultComponent : Fragment;
+            const Layout = route.isHeader ? LayoutComponent : Fragment;
             return (
               <Route
                 key={index}
