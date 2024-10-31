@@ -10,13 +10,13 @@ export const navItem = [
     {
         key: '2',
         label: (
-            <Link to='/dssv'>DSSV</Link>
+            <Link to='/about'>About</Link>
         )
     },
     {
         key: '3',
         label: (
-            <Link to='/dssv'>DSSV</Link>
+            <Link to='/contact'>Contact</Link>
         )
     }
 ]

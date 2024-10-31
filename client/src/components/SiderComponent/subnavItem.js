@@ -31,19 +31,27 @@ export const subnavItem = [
         label: 'Dữ liệu',
         children: [
             {
-                label: 'Sự kiện',
+                label: (
+                    <Link to='/events'>Sự kiện</Link>
+                ),
                 icon: <CalendarOutlined />
             },
             {
-                label: 'Sinh viên',
+                label: (
+                    <Link to='/sinhvien'>Sinh viên</Link>
+                ),
                 icon: <UserOutlined />
             },
             {
-                label: 'Ban cán sự',
+                label: (
+                    <Link to='/bancansu'>Ban cán sự</Link>
+                ),
                 icon: <TeamOutlined />
             },
             {
-                label: 'Chứng nhận',
+                label: (
+                    <Link to='/chungnhan'>Chứng nhận</Link>
+                ),
                 icon: <IdcardOutlined />
             }
         ],
