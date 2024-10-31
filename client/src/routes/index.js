@@ -1,8 +1,11 @@
 import HomePage from '../pages/HomePage';
-import DSSVPage from '../pages/DSSVPage';
+import DSSVPage from '../pages/SinhvienPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import LoginPage from '../pages/LoginPage';
 import UserProfilePage from '../pages/UserProfilePage';
+import EventsPage from '../pages/EventsPage';
+import AboutPage from '../pages/AboutPage';
+import ContactPage from '../pages/ContactPage';
 
 const routes = [
     {
@@ -11,8 +14,13 @@ const routes = [
         isHeader: true
     },
     {
-        path: '/dssv',
-        element: DSSVPage,
+        path: '/about',
+        element: AboutPage,
+        isHeader: true
+    },
+    {
+        path: '/contact',
+        element: ContactPage,
         isHeader: true
     },
     {
@@ -24,6 +32,26 @@ const routes = [
         path: '/login',
         element: LoginPage,
         isHeader: false
+    },
+    {
+        path: '/events',
+        element: EventsPage,
+        isHeader: true
+    },
+    {
+        path: '/sinhvien',
+        element: DSSVPage,
+        isHeader: true
+    },
+    {
+        path: '/bancansu',
+        element: DSSVPage,
+        isHeader: true
+    },
+    {
+        path: '/chungnhan',
+        element: DSSVPage,
+        isHeader: true
     },
     {
         path: '*',
