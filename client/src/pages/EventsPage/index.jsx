@@ -1,17 +1,62 @@
-import { Button, Col, Flex, Select, Space } from "antd";
+import { Button, Col, DatePicker, Flex, Space, Table } from "antd";
 import Title from "antd/es/typography/Title";
 import Text from "antd/es/typography/Text";
+import dayjs from "dayjs";
 
-import { khoa, lop, events } from "../../app/data";
+import { events } from "../../app/data";
+import { useState } from "react";
+import Search from "antd/es/input/Search";
+import Link from "antd/es/typography/Link";
 
 const EventsPage = () => {
-    const khoaList = khoa;
-    const lopList = lop;
     const eventList = events;
+    const columns = [
+        {
+            title: 'Tên sự kiện',
+            dataIndex: 'title',
+            key: 'title',
+        },
+        {
+            title: 'Ngày tổ chức',
+            dataIndex: 'date',
+            key: 'date',
+        },
+        {
+            title: 'Địa điểm',
+            dataIndex: 'location',
+            key: 'location',
+        },
+        {
+            title: 'Hành động',
+            key: 'action',
+            render: (text, record) => (
+                <Space size="middle">
+                    <Link>Chỉnh sửa</Link>
+                    <Link>Xóa</Link>
+                </Space>
+            ),
+        },
 
-    console.log(khoaList);
-    console.log(lopList);
-    console.log(eventList);
+    ];
+
+
+    const [searchText, setSearchText] = useState('');
+    const [fillterEvent, setFillterEvent] = useState(eventList);
+
+    console.log(searchText);
+
+    const handleSearch = (value) => {
+        setSearchText(value);
+        if (value === '') {
+            setFillterEvent(eventList);
+        } else {
+            const fillterEvent = eventList.filter((event) => {
+                return event.title.toLowerCase().includes(value.toLowerCase());
+            });
+            setFillterEvent(fillterEvent);
+        }
+    }
+
 
     return (
         <div>
@@ -19,36 +64,18 @@ const EventsPage = () => {
             <Flex>
                 <Col span={3}><Button type="primary">Thêm sự kiện</Button></Col>
                 <Col span={6}>
-                    <Flex>
-                        <Text style={{ margin: 5 }}>Theo khoa:</Text>
-                        <Space.Compact>
-                            <Select defaultValue={1}>
-                                {khoaList.map((item) => (
-                                    <Select.Option key={item.id} value={item.id}>{item.title}</Select.Option>
-                                ))}
-                            </Select>
-                        </Space.Compact>
-                    </Flex>
+                    <Search placeholder="Tìm kiếm sự kiện" onSearch={handleSearch} enterButton />
                 </Col>
-                <Col span={4}>
-                    <Flex>
-                        <Text style={{ margin: 5 }}>Theo lớp:</Text>
-                        <Space.Compact>
-                            <Select defaultValue={1}>
-                                {lopList.map((item) => (
-                                    <Select.Option key={item.id} value={item.id}>{item.title}</Select.Option>
-                                ))}
-                            </Select>
-                        </Space.Compact>
-                    </Flex>
-                </Col>
-                <Col span={6}>
+                <Col span={5}>
                     <Text style={{ margin: 5 }}>Từ ngày:</Text>
+                    <DatePicker defaultValue={dayjs().subtract(1, 'month')} />
                 </Col>
-                <Col span={6}>
+                <Col span={5}>
                     <Text style={{ margin: 5 }}>Đến ngày:</Text>
+                    <DatePicker defaultValue={dayjs()} />
                 </Col>
             </Flex>
+            <Table columns={columns} dataSource={fillterEvent} />
         </div >
     );
 }

@@ -33,7 +33,7 @@ export const events = [
         id: 1,
         title: 'Event 1',
         description: 'Description 1',
-        date: '2021-10-01',
+        date: '01-10-2021',
         location: 'Location 1',
         users: [
             {
@@ -56,7 +56,7 @@ export const events = [
         id: 2,
         title: 'Event 2',
         description: 'Description 2',
-        date: '2021-10-02',
+        date: '01-11-2021',
         location: 'Location 2',
         users: [
             {
@@ -79,7 +79,7 @@ export const events = [
         id: 3,
         title: 'Event 3',
         description: 'Description 3',
-        date: '2021-10-03',
+        date: '01-12-2021',
         location: 'Location 3',
         users: [
             {
