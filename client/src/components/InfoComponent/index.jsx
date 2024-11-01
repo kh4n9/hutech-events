@@ -7,7 +7,7 @@ const InfoComponent = (prop) => {
         <div>
             <Flex>
                 <Col span={6}>
-                    <Row><Image width={200} src={prop.avatarUrl} /></Row>
+                    <Row><Image style={{ borderRadius: 24}} width={200} src={prop.avatarUrl} /></Row>
                     <Row style={{marginTop:20}}><Link href="#">Change Avatar</Link></Row>
                     <Row style={{marginTop:20}}><Link href="#">Change Password</Link></Row>
                     <Row style={{marginTop:20}}><Link href="#">Edit Profile</Link></Row>
