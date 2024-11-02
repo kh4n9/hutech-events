@@ -7,12 +7,10 @@ const items2 = subnavItem.map((item, index) => {
   return item;
 });
 
-const SiderComponent = ({ colorBgContainer }) => {
+const AdminSiderComponent = ({ colorBgContainer }) => {
   return (
     <Menu
       mode="inline"
-      // defaultSelectedKeys={['1']}
-      // defaultOpenKeys={['sub1']}
       style={{
         height: '100%',
         borderRight: 0,
@@ -23,4 +21,4 @@ const SiderComponent = ({ colorBgContainer }) => {
   );
 };
 
-export default SiderComponent;
+export default AdminSiderComponent;

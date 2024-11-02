@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { routes } from './routes';
+import AdminLayoutComponent from './components/AdminLayoutComponent';
 import LayoutComponent from './components/LayoutComponent';
 
 function App() {
@@ -10,7 +11,17 @@ function App() {
         <Routes>
           {routes.map((route, index) => {
             const Element = route.element;
-            const Layout = route.isHeader ? LayoutComponent : Fragment;
+            let Layout = Fragment;
+            if (route.isHeader && route.isAdmin) {
+              Layout = AdminLayoutComponent
+            }
+            else if (route.isHeader) {
+              Layout = LayoutComponent;
+            }
+            else {
+              Layout = Fragment;
+            }
+
             return (
               <Route
                 key={index}
@@ -28,5 +39,6 @@ function App() {
     </div>
   )
 }
+
 
 export default App;

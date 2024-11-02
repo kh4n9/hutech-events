@@ -28,6 +28,21 @@ export const users = [
     }
 ];
 
+export const sinhviens = [
+    {
+        mssv: '2180603432',
+        fullname: 'Hoàng Minh Khang',
+    },
+    {
+        mssv: '2180603433',
+        fullname: 'Nguyễn Văn A',
+    },
+    {
+        mssv: '2180603434',
+        fullname: 'Nguyễn Văn B',
+    }
+]
+
 export const events = [
     {
         id: 1,

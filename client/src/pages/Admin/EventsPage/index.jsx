@@ -3,7 +3,7 @@ import Title from "antd/es/typography/Title";
 import Text from "antd/es/typography/Text";
 import dayjs from "dayjs";
 
-import { events } from "../../app/data";
+import { events } from "../../../app/data";
 import { useState } from "react";
 import Search from "antd/es/input/Search";
 import Link from "antd/es/typography/Link";

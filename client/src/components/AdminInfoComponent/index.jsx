@@ -2,7 +2,7 @@ import { Col, Image, Row, Typography, Input, Flex } from 'antd';
 
 const { Link, Title, Text } = Typography;
 
-const InfoComponent = (prop) => {
+const AdminInfoComponent = (prop) => {
     return (
         <div>
             <Flex>
@@ -28,4 +28,4 @@ const InfoComponent = (prop) => {
     );
 }
 
-export default InfoComponent;
+export default AdminInfoComponent;

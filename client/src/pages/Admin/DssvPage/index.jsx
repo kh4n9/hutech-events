@@ -1,4 +1,4 @@
-function DSSVPage() {
+function SinhvienPage() {
   return (
     <div>
       <h1>Danh sách sinh viên</h1>
@@ -6,4 +6,4 @@ function DSSVPage() {
   );
 }
 
-export default DSSVPage;
+export default SinhvienPage;
