@@ -29,9 +29,9 @@ export const users = [
 ];
 
 export const sinhviens = [
-    { mssv: '2180603432', fullname: 'Hoàng Minh Khang' },
-    { mssv: '2180603433', fullname: 'Nguyễn Văn A' },
-    { mssv: '2180603434', fullname: 'Nguyễn Văn B' }
+    { mssv: '2180603432', fullname: 'Hoàng Minh Khang', classId: 1,},
+    { mssv: '2180603433', fullname: 'Nguyễn Văn A', classId: 1, },
+    { mssv: '2180603434', fullname: 'Nguyễn Văn B', classId: 1, }
 ];
 
 export const events = [
@@ -42,7 +42,7 @@ export const events = [
         date: '2021-10-01',
         location: 'Location 1',
         createBy: 'Khoa cntt',
-        mssvs: ['2180603432', '2180603433'] // References to user IDs
+        mssvs: ['2180603432', '2180603433']
     },
     {
         id: 2,
@@ -71,7 +71,7 @@ export const khoa = [
 ];
 
 export const lop = [
-    { id: 1, title: '21DTHB1' },
-    { id: 2, title: '21DTHB2' },
-    { id: 3, title: '21DTHB3' }
+    { id: 1, title: '21DTHB1', khoaId: 1 },
+    { id: 2, title: '21DTHB2', khoaId: 1 },
+    { id: 3, title: '21DTHB3', khoaId: 1 }
 ];
