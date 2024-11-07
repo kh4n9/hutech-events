@@ -4,8 +4,7 @@ import Text from "antd/es/typography/Text";
 import dayjs from "dayjs";
 
 import { events } from "../../../app/data";
-import { useEffect, useState } from "react";
-import Search from "antd/es/input/Search";
+import { useState } from "react";
 import Link from "antd/es/typography/Link";
 
 const EventsPage = () => {
