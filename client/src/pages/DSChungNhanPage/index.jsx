@@ -3,6 +3,7 @@ import Title from "antd/es/typography/Title";
 import Text from "antd/es/typography/Text";
 import { useParams, useNavigate } from "react-router-dom";
 import { events, chungnhans } from "../../app/data";
+import iconEventImage from "./icon_event.png";
 
 const DSChungNhanPage = () => {
     const { mssv } = useParams();
@@ -25,32 +26,32 @@ const DSChungNhanPage = () => {
                         // lấy thông tin event tương ứng với chứng nhận
                         const event = events.find((e) => e.id === chungnhan.eventId);
                         return (
-                            <Col onClick={() => handleClick(chungnhan.id)} key={chungnhan.id}
-                                md={6}
-                                textAlign="center"
-                            >
-                                <div style={{ padding: '20px', border: '1px solid #ddd', borderRadius: '8px', textAlign: 'center' }}>
-                                    <Image
-                                        src="https://hutechcheckin.com/img/icon_event.jpg"
-                                        width={300}
-                                        height={200}
-                                        preview={false}
-                                        style={{ borderRadius: '8px' }}
-                                    />
-                                    <Title level={4}>{event.title}</Title>
-                                    <Row justify="space-between">
-                                        <Col span={12}>
-                                            <Text>{event.date}</Text>
-                                        </Col>
-                                        <Col span={12}>
-                                            <Text>{event.location}</Text>
-                                        </Col>
-                                    </Row>
-                                    <Text>
-                                        Đơn vị tổ chức: {event.createBy}
-                                    </Text>
-                                </div>
-                            </Col>
+                            <button
+                                onClick={() => handleClick(chungnhan.id)}
+                                key={chungnhan.id}
+                                style={{ margin: '10px', padding: '10px', border: '1px solid #ddd', borderRadius: '8px', textAlign: 'center' }}>
+                                <Image
+                                    src={iconEventImage}
+                                    width={200}
+                                    height={150}
+                                    preview={false}
+                                    style={{ borderRadius: '8px' }}
+                                />
+                                <Title level={4}>{event.title}</Title>
+                                <Row justify="space-between">
+                                    <Col span={12}>
+                                        <Text>
+                                            {event.time.daysInMonth()}/{event.time.month() + 1}/{event.time.year()}
+                                        </Text>
+                                    </Col>
+                                    <Col span={12}>
+                                        <Text>{event.location}</Text>
+                                    </Col>
+                                </Row>
+                                <Text>
+                                    {event.createBy}
+                                </Text>
+                            </button>
                         )
                     })}
                 </Row>

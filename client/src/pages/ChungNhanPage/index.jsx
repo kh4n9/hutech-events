@@ -12,7 +12,7 @@ const ChungNhanPage = () => {
     const { id } = useParams();
     const chungnhan = chungnhans.find((cn) => cn.id === parseInt(id, 10));
 
-    
+
     useEffect(() => {
         const generateCertificateImage = async () => {
             if (certificateRef.current) {
@@ -25,7 +25,7 @@ const ChungNhanPage = () => {
 
     return (
         <Row direction="column">
-            <Button type="primary" onClick={() => navigate(-1)} style={{ marginBottom: '20px' }}>
+            <Button type="primary" onClick={() => navigate(-1)} style={{ margin: '20px' }}>
                 Quay lại
             </Button>
             {!chungnhan ? (
@@ -34,11 +34,11 @@ const ChungNhanPage = () => {
                 imgData ? (
                     <Col>
                         <Row justify="center">
-                            <img src={imgData} alt="Giấy chứng nhận" style={{ borderRadius: "24px", width: '80%' }} />
+                            <img src={imgData} alt="Giấy chứng nhận" style={{ borderRadius: "16px", width: '40%' }} />
                         </Row>
                         <Row justify="center">
                             <Button type="primary" style={{ marginTop: '10px' }}>
-                                <a href={imgData} download="GiayChungNhan.png">Tải xuống giấy chứng nhận</a>
+                                <a href={imgData} download={`chungnhan_${chungnhan.id}.png`}>Tải xuống giấy chứng nhận</a>
                             </Button>
                         </Row>
                     </Col>
