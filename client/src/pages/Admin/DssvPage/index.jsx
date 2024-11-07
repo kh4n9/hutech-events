@@ -1,6 +1,6 @@
 import Title from "antd/es/typography/Title";
 import { Table } from "antd";
-import { sinhviens, lop } from '../../../app/data';
+import { sinhviens, lops } from '../../../app/data';
 import Search from "antd/es/input/Search";
 import { useState, useEffect } from "react";
 
@@ -29,7 +29,7 @@ function SinhvienPage() {
 
   useEffect(() => {
     const dataWithLop = sinhviens.map((item, index) => {
-      const lopItem = lop.find((lop) => lop.id === item.classId);
+      const lopItem = lops.find((lop) => lop.id === item.classId);
       return { ...item, key: index, lopItem: lopItem ? lopItem.title : '' };
     });
     setData(dataWithLop);

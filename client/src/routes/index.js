@@ -7,6 +7,7 @@ import EventsPage from '../pages/Admin/EventsPage';
 import AboutPage from '../pages/Admin/AboutPage';
 import ContactPage from '../pages/Admin/ContactPage';
 import DSChungNhanPage from '../pages/DSChungNhanPage';
+import ChungNhanPage from '../pages/ChungNhanPage';
 
 const routes = [
     { path: '/', element: HomePage, isHeader: true, isAdmin: false },
@@ -17,7 +18,7 @@ const routes = [
     { path: '/events', element: EventsPage, isHeader: true, isAdmin: true },
     { path: '/sinhvien', element: DssvPage, isHeader: true, isAdmin: true },
     { path: '/sinhvien/:mssv', element: DSChungNhanPage, isHeader: true, isAdmin: false },
-    { path: '/sinhvien/:mssv/:eventid', element: DSChungNhanPage, isHeader: true, isAdmin: false },
+    { path: '/chungnhan/:id', element: ChungNhanPage, isHeader: true, isAdmin: false },
     { path: '/bancansu', element: DssvPage, isHeader: true, isAdmin: true },
     { path: '*', element: NotFoundPage, isHeader: false, isAdmin: false }
   ];
