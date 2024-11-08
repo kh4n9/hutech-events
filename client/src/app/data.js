@@ -55,7 +55,7 @@ export const events = [
         id: 2,
         title: 'Event 2',
         description: 'Description 2',
-        time: dayjs('2024-04-13 19:18'),
+        time: dayjs('2024-04-14 19:18'),
         location: 'Khu AB',
         createBy: 'Khoa cntt',
     },
@@ -63,7 +63,7 @@ export const events = [
         id: 3,
         title: 'Event 3',
         description: 'Description 3',
-        time: dayjs('2024-04-13 19:18'),
+        time: dayjs('2024-04-12 19:18'),
         location: 'Khu E',
         createBy: 'Khoa cntt',
     }

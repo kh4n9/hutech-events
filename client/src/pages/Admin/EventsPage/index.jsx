@@ -1,4 +1,4 @@
-import { Button, Col, DatePicker, Flex, Input, Space, Table } from "antd";
+import { Button, Col, DatePicker, Input, Space, Table } from "antd";
 import Title from "antd/es/typography/Title";
 import Text from "antd/es/typography/Text";
 import dayjs from "dayjs";
@@ -14,6 +14,8 @@ const EventsPage = () => {
     const [toTime, setToTime] = useState(dayjs());
     const [filteredEvent, setFilteredEvent] = useState(eventList);
 
+    console.log(dayjs('13-04-2024').unix());
+
     const columns = [
         {
             title: 'Tên sự kiện',
@@ -24,7 +26,10 @@ const EventsPage = () => {
             title: 'Thời gian',
             dataIndex: 'time',
             key: 'time',
-            render: (time) => dayjs(time).format('DD/MM/YYYY HHgmmp'),
+            render: (time) => dayjs(time).format('DD/MM/YYYY HH:mm'),
+            // xếp theo thời gian giảm dần
+            sorter: (a, b) => dayjs(a.time).unix() - dayjs(b.time).unix(),
+            sortDirections: ['descend', 'ascend'],
         },
         {
             title: 'Địa điểm',
@@ -55,28 +60,27 @@ const EventsPage = () => {
     return (
         <div>
             <Title>Sự kiện</Title>
-            <Flex>
+            <div style={{ display: 'flex', marginBottom: '16px' }}>
                 <Col span={3}><Button type="primary">Thêm sự kiện</Button></Col>
-                <Col span={4} style={{ marginRight: '20px'}}>
+                <Col span={4} style={{ marginRight: '20px' }}>
                     <Input placeholder="Tìm kiếm sự kiện" value={searchValue} onChange={(e) => setSearchValue(e.target.value)} />
                 </Col>
                 <Col span={5}>
                     <Text>Từ ngày:</Text>
-                    <DatePicker onChange={(date) => setFromTime(date)}
-                    value={fromTime} />
+                    <DatePicker onChange={(date) => setFromTime(date)} value={fromTime} />
                 </Col>
                 <Col span={5}>
                     <Text>Đến ngày:</Text>
-                    <DatePicker
-                    onChange={(date) => setToTime(date)}
-                    value={toTime} />
+                    <DatePicker onChange={(date) => setToTime(date)} value={toTime} />
                 </Col>
                 <Col span={3}>
                     <Button type="primary" onClick={() => handleSearch(searchValue, fromTime, toTime)}>Tìm kiếm</Button>
                 </Col>
-            </Flex>
-            <Table columns={columns} dataSource={filteredEvent} />
-        </div >
+            </div>
+            <Table columns={columns} dataSource={filteredEvent} rowKey="id" 
+                pagination={{ pageSize: 10, showSizeChanger: false }}
+            />
+        </div>
     );
 }
 
