@@ -33,13 +33,23 @@ export const users = [
 export const sinhviens = [
     { mssv: '2180603432', fullname: 'Hoàng Minh Khang', classId: 1,},
     { mssv: '2180603433', fullname: 'Nguyễn Văn A', classId: 1, },
-    { mssv: '2180603434', fullname: 'Nguyễn Văn B', classId: 1, }
+    { mssv: '2180603434', fullname: 'Nguyễn Văn B', classId: 1, },
+    { mssv: '2180601133', fullname: 'Nguyễn Thành Phú', classId: 1, }
 ];
 
 export const chungnhans = [
     { id: 1, mssv: '2180603432', eventId: 1 },
     { id: 2, mssv: '2180603432', eventId: 2 },
     { id: 3, mssv: '2180603433', eventId: 1 },
+    { id: 4, mssv: '2180603433', eventId: 2 },
+    { id: 5, mssv: '2180603434', eventId: 1 },
+    { id: 6, mssv: '2180603434', eventId: 2 },
+    { id: 7, mssv: '2180601133', eventId: 1 },
+    { id: 8, mssv: '2180601133', eventId: 2 },
+    { id: 9, mssv: '2180603432', eventId: 3 },
+    { id: 10, mssv: '2180603433', eventId: 3 },
+    { id: 11, mssv: '2180603434', eventId: 3 },
+    { id: 12, mssv: '2180601133', eventId: 3 }
 ]
 
 export const events = [
@@ -49,7 +59,7 @@ export const events = [
         description: 'Description 1',
         time: dayjs('2024-04-13 19:18'),
         location: 'Khu E',
-        createBy: 'Khoa cntt',
+        createBy: 'khoa công nghệ thông tin',
     },
     {
         id: 2,
@@ -57,7 +67,7 @@ export const events = [
         description: 'Description 2',
         time: dayjs('2024-04-14 19:18'),
         location: 'Khu AB',
-        createBy: 'Khoa cntt',
+        createBy: 'khoa công nghệ thông tin',
     },
     {
         id: 3,
@@ -65,7 +75,7 @@ export const events = [
         description: 'Description 3',
         time: dayjs('2024-04-12 19:18'),
         location: 'Khu E',
-        createBy: 'Khoa cntt',
+        createBy: 'khoa công nghệ thông tin',
     }
 ];
 
