@@ -7,6 +7,11 @@ const departmentChema = new mongoose.Schema({
         unique: true,
         trim: true
     },
+    abbreviation: {
+        type: String,
+        required: true,
+        trim: true,
+    },
     description: {
         type: String,
         required: true,

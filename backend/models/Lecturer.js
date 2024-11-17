@@ -18,6 +18,7 @@ const lecturer = new mongoose.Schema({
     },
     signatureUrl: {
         type: String,
+        default: 'https://e7.pngegg.com/pngimages/923/614/png-clipart-digital-signature-signature-block-signatures-angle-material.png'
     }
 });
 
