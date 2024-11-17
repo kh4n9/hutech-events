@@ -8,7 +8,8 @@ export const users = [
         phonenumber: '1234567890',
         email: 'johndoe@gmail.com',
         password: 'password',
-        avatarUrl: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50'
+        avatarUrl: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
+        role: 'collaborator'
     },
     {
         id: 2,
@@ -17,7 +18,8 @@ export const users = [
         phonenumber: '1234567890',
         email: 'janedoe@gmail.com',
         password: 'password',
-        avatarUrl: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50'
+        avatarUrl: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
+        role: 'collaborator'
     },
     {
         id: 3,
@@ -26,7 +28,18 @@ export const users = [
         phonenumber: '1234567890',
         email: 'johnsmith@gmail.com',
         password: 'password',
-        avatarUrl: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50'
+        avatarUrl: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
+        role: 'collaborator'
+    },
+    {
+        id: 4,
+        fullname: 'Hoàng Minh Khang',
+        username: 'khang',
+        phonenumber: '1234567890',
+        email: 'mkhoangvip@gmail.com',
+        password: 'admin',
+        avatarUrl: 'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
+        role: 'admin'
     }
 ];
 

@@ -8,18 +8,22 @@ import AboutPage from '../pages/Admin/AboutPage';
 import ContactPage from '../pages/Admin/ContactPage';
 import DSChungNhanPage from '../pages/DSChungNhanPage';
 import ChungNhanPage from '../pages/ChungNhanPage';
+import SettingPage from '../pages/Admin/SettingPage';
+import CertificateTemplatePage from '../pages/Admin/CertificateTemplatePage';
 
 const routes = [
     { path: '/', element: HomePage, isHeader: true, isAdmin: false },
     { path: '/about', element: AboutPage, isHeader: true, isAdmin: false },
     { path: '/contact', element: ContactPage, isHeader: true, isAdmin: false },
-    { path: '/userProfile', element: UserProfilePage, isHeader: true, isAdmin: true },
+    { path: '/admin/userProfile', element: UserProfilePage, isHeader: true, isAdmin: true },
     { path: '/login', element: LoginPage, isHeader: false, isAdmin: true },
-    { path: '/events', element: EventsPage, isHeader: true, isAdmin: true },
-    { path: '/sinhvien', element: DssvPage, isHeader: true, isAdmin: true },
+    { path: '/admin/events', element: EventsPage, isHeader: true, isAdmin: true },
+    { path: '/admin/sinhvien', element: DssvPage, isHeader: true, isAdmin: true },
     { path: '/sinhvien/:mssv', element: DSChungNhanPage, isHeader: true, isAdmin: false },
     { path: '/chungnhan/:id', element: ChungNhanPage, isHeader: true, isAdmin: false },
-    { path: '/bancansu', element: DssvPage, isHeader: true, isAdmin: true },
+    { path: '/admin/bancansu', element: DssvPage, isHeader: true, isAdmin: true },
+    { path: '/admin/setting', element: SettingPage, isHeader: true, isAdmin: true },
+    { path: '/admin/certificateTemplate', element: CertificateTemplatePage, isHeader: true, isAdmin: true },
     { path: '*', element: NotFoundPage, isHeader: false, isAdmin: false }
   ];
 

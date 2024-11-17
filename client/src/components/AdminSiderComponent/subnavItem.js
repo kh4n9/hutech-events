@@ -10,18 +10,22 @@ export const subnavItem = [
             {
                 key: 'userProfile',
                 label: (
-                    <Link to='/userProfile'>Tài khoản</Link>
+                    <Link to='/admin/userProfile'>Tài khoản</Link>
                 ),
                 icon: <UserOutlined />
             },
             {
                 key: 'settings',
-                label: 'Thiết lập',
+                label: (
+                    <Link to='/admin/settings'>Cài đặt</Link>
+                ),
                 icon: <SettingOutlined />
             },
             {
                 key: 'certificateTemplate',
-                label: 'Mẫu chứng nhận',
+                label: (
+                    <Link to='/admin/certificateTemplate'>Mẫu chứng nhận</Link>
+                ),
                 icon: <IdcardOutlined />
             },
             {
@@ -39,28 +43,28 @@ export const subnavItem = [
             {
                 key: 'events',
                 label: (
-                    <Link to='/events'>Sự kiện</Link>
+                    <Link to='/admin/events'>Sự kiện</Link>
                 ),
                 icon: <CalendarOutlined />
             },
             {
                 key: 'students',
                 label: (
-                    <Link to='/sinhvien'>Sinh viên</Link>
+                    <Link to='/admin/sinhvien'>Sinh viên</Link>
                 ),
                 icon: <UserOutlined />
             },
             {
                 key: 'classLeader',
                 label: (
-                    <Link to='/bancansu'>Ban cán sự</Link>
+                    <Link to='/admin/bancansu'>Ban cán sự</Link>
                 ),
                 icon: <TeamOutlined />
             },
             {
                 key: 'certificates',
                 label: (
-                    <Link to='/chungnhan'>Chứng nhận</Link>
+                    <Link to='/admin/chungnhan'>Chứng nhận</Link>
                 ),
                 icon: <IdcardOutlined />
             }
